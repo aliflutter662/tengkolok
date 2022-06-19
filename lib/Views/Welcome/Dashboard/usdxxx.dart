@@ -1,6 +1,7 @@
-import 'package:bot_telegram/Views/education.dart';
+import 'package:bot_telegram/Views/Welcome/Education/education.dart';
 import 'package:bot_telegram/helper/helper.dart';
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class USDXXX extends StatefulWidget {
   USDXXX({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class _USDXXXState extends State<USDXXX> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: HexColor("#3b3b69"),
         title: Text('USDXXX pair price converter'),
       ),
       body: Padding(
@@ -58,8 +59,8 @@ class _USDXXXState extends State<USDXXX> {
               SizedBox(
                 height: 35,
               ),
-              widgetss().Simplebutton(
-                  'Convert', 12, 120, 40, Colors.white, Colors.black, USDXXX()),
+              widgetss().Simplebutton('Convert', 12, 120, 40, Colors.white,
+                  HexColor("#3b3b69"), USDXXX()),
             ],
           ),
         ),

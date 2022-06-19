@@ -1,6 +1,6 @@
-import 'package:bot_telegram/Views/Dashboard.dart';
+import 'package:bot_telegram/Views/Welcome/Dashboard/Dashboard.dart';
 import 'package:bot_telegram/Views/splash/splash_screen.dart';
-import 'package:bot_telegram/Views/welcome.dart';
+import 'package:bot_telegram/Views/Welcome/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

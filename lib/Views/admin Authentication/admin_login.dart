@@ -1,20 +1,19 @@
-import 'package:bot_telegram/Views/Welcome/Dashboard/Dashboard.dart';
-import 'package:bot_telegram/Views/authentication/forgot.dart';
-import 'package:bot_telegram/Views/authentication/signup.dart';
+import 'package:bot_telegram/Views/Welcome/Admin/admin_page.dart';
 import 'package:bot_telegram/Views/Welcome/welcome.dart';
+import 'package:bot_telegram/Views/admin%20Authentication/forgot.dart';
+import 'package:bot_telegram/Views/authentication/forgot.dart';
 import 'package:bot_telegram/helper/helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
-class Login extends StatefulWidget {
-  Login({Key? key}) : super(key: key);
+class AdminLogin extends StatefulWidget {
+  AdminLogin({Key? key}) : super(key: key);
 
   @override
-  State<Login> createState() => _LoginState();
+  State<AdminLogin> createState() => _AdminLoginState();
 }
 
-class _LoginState extends State<Login> {
+class _AdminLoginState extends State<AdminLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +46,7 @@ class _LoginState extends State<Login> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   widgetss().Textbutton(
-                      "Forgot Password", Colors.black, ForgotPassword()),
+                      "Forgot Password", Colors.black, ForgotPassword1()),
                 ],
               ),
             ),
@@ -58,7 +57,7 @@ class _LoginState extends State<Login> {
               height: 50.0,
               child: RaisedButton(
                 onPressed: () {
-                  Get.to(Dashboard());
+                  Get.to(AdminPage());
                 },
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(80.0)),
@@ -86,8 +85,7 @@ class _LoginState extends State<Login> {
             ),
             // widgetss().Simplebutton(
             //     'Login', 12, 120, 40, Colors.white, Colors.black, Welcome()),
-            widgetss().Textbutton('Become a member', Colors.black, Signup())
-            // Text("Becam")
+            // widgetss().Textbutton('Become a member', Colors.black, Signup())
           ],
         ),
       ),

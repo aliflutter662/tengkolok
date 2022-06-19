@@ -1,16 +1,17 @@
+import 'package:bot_telegram/Views/admin%20Authentication/forgot_password.dart';
 import 'package:bot_telegram/Views/authentication/forgot_password.dart';
 import 'package:bot_telegram/Views/Welcome/welcome.dart';
 import 'package:bot_telegram/helper/helper.dart';
 import 'package:flutter/material.dart';
 
-class ForgotCode extends StatefulWidget {
-  ForgotCode({Key? key}) : super(key: key);
+class ForgotCode1 extends StatefulWidget {
+  ForgotCode1({Key? key}) : super(key: key);
 
   @override
-  State<ForgotCode> createState() => _ForgotCodeState();
+  State<ForgotCode1> createState() => _ForgotCode1State();
 }
 
-class _ForgotCodeState extends State<ForgotCode> {
+class _ForgotCode1State extends State<ForgotCode1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +46,7 @@ class _ForgotCodeState extends State<ForgotCode> {
               height: 25,
             ),
             widgetss().Simplebutton('Send', 12, 120, 40, Colors.white,
-                Color(0xff3b3b69), ForgotNewPassword()),
+                Color(0xff3b3b69), ForgotNewPassword1()),
           ],
         )),
       ),

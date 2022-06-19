@@ -1,7 +1,9 @@
 import 'dart:async';
 
 import 'package:bot_telegram/Views/authentication/login.dart';
-import 'package:bot_telegram/Views/welcome.dart';
+import 'package:bot_telegram/Views/authentication/login_signup.dart';
+import 'package:bot_telegram/Views/Welcome/welcome.dart';
+import 'package:bot_telegram/Views/select%20User/select_user.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -22,7 +24,8 @@ class SplashScreenState extends State<SplashScreen>
   }
 
   void navigationPage() {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => SelectUser()));
   }
 
   @override

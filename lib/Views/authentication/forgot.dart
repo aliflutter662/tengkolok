@@ -1,5 +1,5 @@
 import 'package:bot_telegram/Views/authentication/forgot_code.dart';
-import 'package:bot_telegram/Views/welcome.dart';
+import 'package:bot_telegram/Views/Welcome/welcome.dart';
 import 'package:bot_telegram/helper/helper.dart';
 import 'package:flutter/material.dart';
 
@@ -37,7 +37,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
               height: 25,
             ),
             widgetss().Simplebutton('Verify', 12, 120, 40, Colors.white,
-                Colors.black, ForgotCode()),
+                Color(0xff3b3b69), ForgotCode()),
           ],
         )),
       ),

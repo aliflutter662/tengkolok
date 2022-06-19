@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class widgetss {
   customCard(
-      double elevation,
-      BorderRadius borderRadius,
-      Color cardcolor,
-      Widget nextpage,
-      double containerheight,
-      String text,
-      Color textcolor,
-      double fontsize,
-      FontWeight fontWeight) {
+    double elevation,
+    BorderRadius borderRadius,
+    Color cardcolor,
+    Widget nextpage,
+    double containerheight,
+    String text,
+    Color textcolor,
+    double fontsize,
+    FontWeight fontWeight,
+  ) {
     return Card(
       shape: RoundedRectangleBorder(borderRadius: borderRadius),
       elevation: 5,
-      color: Colors.black,
+      color: HexColor("#3b3b69"),
       child: InkWell(
         onTap: () => Get.to(nextpage),
         child: Container(
@@ -32,7 +34,8 @@ class widgetss {
                       fontSize: fontsize,
                       fontWeight: fontWeight),
                 ),
-              )
+              ),
+
               // widgetss().Textt(
               //     'Admin', Colors.white, 16, FontWeight.normal)
             ],
@@ -134,6 +137,7 @@ class widgetss {
     return TextField(
       obscureText: false,
       decoration: InputDecoration(
+        prefixIcon: Icon(Icons.email),
         hintText: hinttext,
         contentPadding: EdgeInsets.symmetric(
             vertical: contentPadingVertical,
@@ -166,6 +170,7 @@ class widgetss {
     return TextField(
       obscureText: true,
       decoration: InputDecoration(
+        prefixIcon: Icon(Icons.remove_red_eye),
         hintText: hinttext,
         contentPadding: EdgeInsets.symmetric(
             vertical: contentPadingVertical,

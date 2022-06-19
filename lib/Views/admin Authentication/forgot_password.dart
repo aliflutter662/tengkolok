@@ -5,14 +5,14 @@ import 'package:bot_telegram/Views/select%20User/select_user.dart';
 import 'package:bot_telegram/helper/helper.dart';
 import 'package:flutter/material.dart';
 
-class ForgotNewPassword extends StatefulWidget {
-  ForgotNewPassword({Key? key}) : super(key: key);
+class ForgotNewPassword1 extends StatefulWidget {
+  ForgotNewPassword1({Key? key}) : super(key: key);
 
   @override
-  State<ForgotNewPassword> createState() => _ForgotNewPasswordState();
+  State<ForgotNewPassword1> createState() => _ForgotNewPassword1State();
 }
 
-class _ForgotNewPasswordState extends State<ForgotNewPassword> {
+class _ForgotNewPassword1State extends State<ForgotNewPassword1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +47,7 @@ class _ForgotNewPasswordState extends State<ForgotNewPassword> {
               height: 25,
             ),
             widgetss().Simplebutton('Change Password', 12, 120, 40,
-                Colors.white, Color(0xff3b3b69), Login()),
+                Colors.white, Color(0xff3b3b69), AdminLogin())
           ],
         )),
       ),

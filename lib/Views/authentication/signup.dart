@@ -1,6 +1,7 @@
 import 'package:bot_telegram/Views/authentication/login.dart';
 import 'package:bot_telegram/helper/helper.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Signup extends StatefulWidget {
   Signup({Key? key}) : super(key: key);
@@ -55,8 +56,38 @@ class _SignupState extends State<Signup> {
             SizedBox(
               height: 35,
             ),
-            widgetss().Simplebutton(
-                'Sign Up', 12, 120, 40, Colors.white, Colors.black, Login()),
+            Container(
+              height: 50.0,
+              child: RaisedButton(
+                onPressed: () {
+                  Get.to(Login());
+                },
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(80.0)),
+                padding: EdgeInsets.all(0.0),
+                child: Ink(
+                  decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [Color(0xff374ABE), Color(0xff64B6FF)],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                      ),
+                      borderRadius: BorderRadius.circular(30.0)),
+                  child: Container(
+                    constraints:
+                        BoxConstraints(maxWidth: 300.0, minHeight: 50.0),
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Sign up",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            // widgetss().Simplebutton(
+            //     'Sign Up', 12, 120, 40, Colors.white, Colors.black, Login()),
           ],
         )),
       ),
