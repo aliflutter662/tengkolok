@@ -62,6 +62,22 @@ class _AdminPageState extends State<AdminPage> {
               ),
               ListTile(
                 onTap: () {
+                  //   Get.to(AdminPage());
+                },
+                leading: Icon(
+                  Icons.live_help,
+                  color: Colors.white,
+                ),
+                title: Text(
+                  'Broadcast',
+                  style: TextStyle(fontSize: 18, color: Colors.white),
+                ),
+              ),
+              Divider(
+                thickness: 2,
+              ),
+              ListTile(
+                onTap: () {
                   Get.to(Dashboard());
                 },
                 leading: Icon(
@@ -138,36 +154,36 @@ class _AdminPageState extends State<AdminPage> {
           child: Column(
             children: [
               Container(height: 250, child: Image.asset('images/loggo.png')),
-              Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12)),
-                elevation: 5,
-                child: Container(
-                  width: double.infinity,
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 8, right: 8),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text('Admin\'s Corner'),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text('Total Clients: 0/76'),
-                        Text('Details:'),
-                        Text('No active clients found!'),
-                        Text('What would you like to do?'),
-                        SizedBox(
-                          height: 10,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              // Card(
+              //   shape: RoundedRectangleBorder(
+              //       borderRadius: BorderRadius.circular(12)),
+              //   elevation: 5,
+              //   child: Container(
+              //     width: double.infinity,
+              //     child: Padding(
+              //       padding: const EdgeInsets.only(left: 8, right: 8),
+              //       child: Column(
+              //         crossAxisAlignment: CrossAxisAlignment.start,
+              //         children: [
+              //           SizedBox(
+              //             height: 10,
+              //           ),
+              //           Text('Admin\'s Corner'),
+              //           SizedBox(
+              //             height: 10,
+              //           ),
+              //           Text('Total Clients: 0/76'),
+              //           Text('Details:'),
+              //           Text('No active clients found!'),
+              //           Text('What would you like to do?'),
+              //           SizedBox(
+              //             height: 10,
+              //           ),
+              //         ],
+              //       ),
+              //     ),
+              //   ),
+              // ),
               SizedBox(
                 height: 25,
               ),
@@ -210,41 +226,7 @@ class _AdminPageState extends State<AdminPage> {
                                     height: 3,
                                   ),
                                   Text(
-                                    'Add',
-                                    style: TextStyle(
-                                        color: Colors.white, fontSize: 22.0),
-                                  ),
-                                ],
-                              )),
-                            ),
-                          ),
-                        ),
-                        InkWell(
-                          onTap: () {
-                            Get.to(ModifyAdmin());
-                          },
-                          child: Card(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(14),
-                            ),
-                            color: HexColor("#3b3b69"),
-                            elevation: 4,
-                            child: Container(
-                              height: 140,
-                              width: 170,
-                              child: Center(
-                                  child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                    "images/dester.png",
-                                    height: 40,
-                                  ),
-                                  SizedBox(
-                                    height: 3,
-                                  ),
-                                  Text(
-                                    'Modify',
+                                    'Add/modify',
                                     style: TextStyle(
                                         color: Colors.white, fontSize: 22.0),
                                   ),

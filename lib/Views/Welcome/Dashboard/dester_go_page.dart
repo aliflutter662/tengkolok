@@ -1,22 +1,24 @@
-import 'package:bot_telegram/Views/Welcome/Dashboard/destar_join.dart';
+import 'package:bot_telegram/Views/Welcome/Dashboard/destargo.dart';
+import 'package:bot_telegram/Views/Welcome/Dashboard/join.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-class Destar extends StatefulWidget {
-  Destar({Key? key}) : super(key: key);
+class destargo extends StatefulWidget {
+  const destargo({Key? key}) : super(key: key);
 
   @override
-  State<Destar> createState() => _DestarState();
+  State<destargo> createState() => _destargoState();
 }
 
-class _DestarState extends State<Destar> {
+class _destargoState extends State<destargo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: HexColor("#3b3b69"),
-        title: Text('Destar'),
+        title: Text('DestarGo'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -38,7 +40,7 @@ class _DestarState extends State<Destar> {
               //           SizedBox(
               //             height: 10,
               //           ),
-              //           Text('Manage Destar channel\nPlease select:'),
+              //           Text('Manage DestarX channel\nPlease select:'),
               //           SizedBox(
               //             height: 10,
               //           ),
@@ -65,9 +67,7 @@ class _DestarState extends State<Destar> {
                       ),
                       children: [
                         InkWell(
-                          onTap: () {
-                            Get.to(DestarJoin());
-                          },
+                          onTap: () {},
                           child: Card(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(14),
@@ -132,36 +132,41 @@ class _DestarState extends State<Destar> {
                             ),
                           ),
                         ),
-                        Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(14),
-                          ),
-                          color: HexColor("#3b3b69"),
-                          elevation: 4,
-                          child: Container(
-                            height: 140,
-                            width: 170,
-                            child: Center(
-                                child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Image.asset(
-                                  "images/pay.png",
-                                  height: 40,
-                                ),
-                                SizedBox(
-                                  height: 3,
-                                ),
-                                Text(
-                                  'Subscribed',
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 22.0),
-                                ),
-                                SizedBox(
-                                  height: 3,
-                                ),
-                              ],
-                            )),
+                        GestureDetector(
+                          onTap: () {
+                            Get.to(DestarGo());
+                          },
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(14),
+                            ),
+                            color: HexColor("#3b3b69"),
+                            elevation: 4,
+                            child: Container(
+                              height: 140,
+                              width: 170,
+                              child: Center(
+                                  child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    "images/pay.png",
+                                    height: 40,
+                                  ),
+                                  SizedBox(
+                                    height: 3,
+                                  ),
+                                  Text(
+                                    'Subscribed',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 22.0),
+                                  ),
+                                  SizedBox(
+                                    height: 3,
+                                  ),
+                                ],
+                              )),
+                            ),
                           ),
                         ),
                       ],
@@ -169,6 +174,51 @@ class _DestarState extends State<Destar> {
                   ],
                 ),
               ),
+              // Row(
+              //   children: [
+              //     Expanded(
+              //         child: widgetss().customCard(
+              //             5,
+              //             BorderRadius.circular(12),
+              //             Colors.black,
+              //             Join(),
+              //             120,
+              //             'Join',
+              //             Colors.white,
+              //             18,
+              //             FontWeight.bold)),
+              //     Expanded(
+              //         child: widgetss().customCard(
+              //             5,
+              //             BorderRadius.circular(12),
+              //             Colors.black,
+              //             DESTARX(),
+              //             120,
+              //             'Remove',
+              //             Colors.white,
+              //             18,
+              //             FontWeight.bold)),
+              //   ],
+              // ),
+              // SizedBox(
+              //   height: 10,
+              // ),
+              // Row(
+              //   children: [
+              //     Expanded(
+              //         child: widgetss().customCard(
+              //             5,
+              //             BorderRadius.circular(12),
+              //             Colors.black,
+              //             DESTARX(),
+              //             120,
+              //             'Return',
+              //             Colors.white,
+              //             18,
+              //             FontWeight.bold)),
+              //     Expanded(child: Container()),
+              //   ],
+              // ),
               SizedBox(
                 height: 10,
               ),

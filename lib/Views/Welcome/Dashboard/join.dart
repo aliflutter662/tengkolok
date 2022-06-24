@@ -1,6 +1,10 @@
 import 'package:bot_telegram/Views/Welcome/Education/education.dart';
+import 'package:bot_telegram/Views/chat_pages/screens/home_screen.dart';
+
 import 'package:bot_telegram/helper/helper.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class Join extends StatefulWidget {
@@ -24,32 +28,32 @@ class _JoinState extends State<Join> {
           child: Column(
             children: [
               Container(height: 250, child: Image.asset('images/loggo.png')),
-              Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12)),
-                elevation: 5,
-                child: Container(
-                  width: double.infinity,
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 8, right: 8),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                            'Please click on link below to join DestarX channel feed. In case you want to change DestarX channel, you will need to remove current channel subscription first.\nNote: If you cannnot join channel through below selections, please press \'Return\' and try again after 1-2 minutes. If issue persist, please contact admin.'),
-                        SizedBox(
-                          height: 10,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              // Card(
+              //   shape: RoundedRectangleBorder(
+              //       borderRadius: BorderRadius.circular(12)),
+              //   elevation: 5,
+              //   child: Container(
+              //     width: double.infinity,
+              //     child: Padding(
+              //       padding: const EdgeInsets.only(left: 8, right: 8),
+              //       child: Column(
+              //         crossAxisAlignment: CrossAxisAlignment.start,
+              //         children: [
+              //           SizedBox(
+              //             height: 10,
+              //           ),
+              //           Text(
+              //               'Please click on link below to join DestarX channel feed. In case you want to change DestarX channel, you will need to remove current channel subscription first.\nNote: If you cannnot join channel through below selections, please press \'Return\' and try again after 1-2 minutes. If issue persist, please contact admin.'),
+              //           SizedBox(
+              //             height: 10,
+              //           ),
+              //         ],
+              //       ),
+              //     ),
+              //   ),
+              // ),
               SizedBox(
-                height: 25,
+                height: 20,
               ),
               Padding(
                 padding: const EdgeInsets.all(4.0),
@@ -67,7 +71,7 @@ class _JoinState extends State<Join> {
                       children: [
                         InkWell(
                           onTap: () {
-                            BottomSheetSweep();
+                            Get.to(HomeScreen());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -101,7 +105,7 @@ class _JoinState extends State<Join> {
                         ),
                         InkWell(
                           onTap: () {
-                            BottomSheetHunting();
+                            Get.to(HomeScreen());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -135,7 +139,7 @@ class _JoinState extends State<Join> {
                         ),
                         InkWell(
                           onTap: () {
-                            BottomSheetIceberg();
+                            Get.to(HomeScreen());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -169,7 +173,7 @@ class _JoinState extends State<Join> {
                         ),
                         InkWell(
                           onTap: () {
-                            BottomSheetMHV();
+                            Get.to(HomeScreen());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(
@@ -206,7 +210,7 @@ class _JoinState extends State<Join> {
                         ),
                         InkWell(
                           onTap: () {
-                            BottomSheetMFM();
+                            Get.to(HomeScreen());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(

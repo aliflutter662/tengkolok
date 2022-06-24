@@ -1,7 +1,9 @@
+import 'package:bot_telegram/Views/Profile/profile.dart';
 import 'package:bot_telegram/Views/Welcome/Contactus/Contactus.dart';
 import 'package:bot_telegram/Views/Welcome/Dashboard/destar.dart';
 import 'package:bot_telegram/Views/Welcome/Dashboard/destargo.dart';
 import 'package:bot_telegram/Views/Welcome/Dashboard/destarx.dart';
+import 'package:bot_telegram/Views/Welcome/Dashboard/dester_go_page.dart';
 import 'package:bot_telegram/Views/Welcome/Dashboard/join.dart';
 import 'package:bot_telegram/Views/Welcome/Dashboard/usdxxx.dart';
 import 'package:bot_telegram/Views/Welcome/Education/education.dart';
@@ -30,19 +32,46 @@ class _DashboardState extends State<Dashboard> {
               SizedBox(
                 height: 10,
               ),
-              CircleAvatar(
-                radius: 40,
-                backgroundColor: Colors.white,
+              GestureDetector(
+                onTap: () {
+                  Get.to(ProfilePage());
+                },
+                child: Column(
+                  children: [
+                    CircleAvatar(
+                      radius: 40,
+                      backgroundColor: Colors.white,
+                      backgroundImage: NetworkImage(
+                          "https://media.istockphoto.com/photos/headshot-of-cheerful-handsome-man-with-trendy-haircut-and-eyeglasses-picture-id1171169127?k=20&m=1171169127&s=612x612&w=0&h=DxYc1UDQagCiuuaiR1OMRztEsOnWBXwjLPlVqVnn4eY="),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'Profile',
+                      style: TextStyle(fontSize: 18, color: Colors.white),
+                    ),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 10,
               ),
-              Text(
-                'Ali',
-                style: TextStyle(fontSize: 18, color: Colors.white),
+              Divider(
+                thickness: 2,
               ),
-              SizedBox(
-                height: 10,
+              ListTile(
+                onTap: () {
+                  Get.to(ProfilePage());
+                },
+                leading: Icon(
+                  Icons.person,
+                  color: Colors.white,
+                ),
+                title: Text(
+                  'My Profile',
+                  style: TextStyle(fontSize: 18, color: Colors.white),
+                ),
               ),
               Divider(
                 thickness: 2,
@@ -126,43 +155,43 @@ class _DashboardState extends State<Dashboard> {
           child: Column(
             children: [
               Container(height: 250, child: Image.asset('images/loggo.png')),
-              Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12)),
-                elevation: 5,
-                child: Container(
-                  width: double.infinity,
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 8, right: 8),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text('Tengkolok Client\'s Dashboard'),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text('Package: T-Go'),
-                        Text('Indices: Disabled'),
-                        Text('DestarGo: Enabled'),
-                        Text('Expiry date: None'),
-                        Text('Auto renewal: No'),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text('What would you like to do?'),
-                        SizedBox(
-                          height: 10,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              // Card(
+              //   shape: RoundedRectangleBorder(
+              //       borderRadius: BorderRadius.circular(12)),
+              //   elevation: 5,
+              //   child: Container(
+              //     width: double.infinity,
+              //     child: Padding(
+              //       padding: const EdgeInsets.only(left: 8, right: 8),
+              //       child: Column(
+              //         crossAxisAlignment: CrossAxisAlignment.start,
+              //         children: [
+              //           SizedBox(
+              //             height: 10,
+              //           ),
+              //           Text('Tengkolok Client\'s Dashboard'),
+              //           SizedBox(
+              //             height: 10,
+              //           ),
+              //           Text('Package: T-Go'),
+              //           Text('Indices: Disabled'),
+              //           Text('DestarGo: Enabled'),
+              //           Text('Expiry date: None'),
+              //           Text('Auto renewal: No'),
+              //           SizedBox(
+              //             height: 10,
+              //           ),
+              //           Text('What would you like to do?'),
+              //           SizedBox(
+              //             height: 10,
+              //           ),
+              //         ],
+              //       ),
+              //     ),
+              //   ),
+              // ),
               SizedBox(
-                height: 25,
+                height: 20,
               ),
               Padding(
                 padding: const EdgeInsets.all(4.0),
@@ -214,7 +243,7 @@ class _DashboardState extends State<Dashboard> {
                         ),
                         InkWell(
                           onTap: () {
-                            Get.to(DestarGo());
+                            Get.to(destargo());
                           },
                           child: Card(
                             shape: RoundedRectangleBorder(

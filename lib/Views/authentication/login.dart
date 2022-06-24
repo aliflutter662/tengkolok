@@ -31,7 +31,7 @@ class _LoginState extends State<Login> {
             Padding(
               padding: EdgeInsets.only(left: 14, right: 14),
               child: widgetss().customTextField(
-                  'Email', 12, 12, Colors.grey, 2, 12, Colors.grey, 2, 12),
+                  'User Name', 12, 12, Colors.grey, 2, 12, Colors.grey, 2, 12),
             ),
             SizedBox(
               height: 20,
